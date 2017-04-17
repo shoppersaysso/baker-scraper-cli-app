@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require  "bundler/setup"
+require './lib/baker_scraper'
+
+BakerScraper::CLI.new.call
