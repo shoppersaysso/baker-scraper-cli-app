@@ -2,17 +2,25 @@ class BakerScraper::CLI
 
 
 	def call
-		puts "Welcome to the Joy the Baker Recipe Scraper!"
+		puts "Welcome to the Joy the Baker Recipe Scraper!".blue
 		list_categories
 		menu
 		goodbye
 	end
 
 	def list_categories
-		puts "Enter a number of a recipe category, start over, or exit:"
+		puts "Enter a number of a recipe category, start over, or exit:".yellow
 		@categories = BakerScraper::Category.scrape_categories
 		@categories.each.with_index(1) do |category, i|
 			puts "#{i}. #{category}"
+		end
+	end
+
+  def list_recipes(the_category)
+		puts "Enter a number of a recipe, start over, or back:".green
+		@recipes = BakerScraper::Recipe.scrape_recipes(the_category)
+		@recipes.each.with_index(1) do |title, i|
+			puts "#{i}. #{title}"
 		end
 	end
 
@@ -24,16 +32,17 @@ class BakerScraper::CLI
 			if input.to_i > 0
         		the_category = @categories[input.to_i-1]
         		puts "#{the_category} Recipes:"
+        		list_recipes(the_category)
         	elsif input == "start over"
         		list_categories
 			else
-				puts "That's not a valid category. Type start over or exit?" unless input == "exit"
+				puts "That's not a valid category. Type start over or exit?".red unless input == "exit"
 			end
 		end
 	end
 
 	def goodbye
-		puts "Enjoy your recipe!"
+		puts "Enjoy your recipe!".blue
 	end
 
 end
