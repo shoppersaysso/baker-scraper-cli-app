@@ -10,17 +10,24 @@ class BakerScraper::CLI
 
 	def list_categories
 		puts "Enter a number of a recipe category, start over, or exit:"
+		@categories = BakerScraper::Category.scrape_categories
+		@categories.each.with_index(1) do |category, i|
+			puts "#{i}. #{category}"
+		end
 	end
 
 	def menu
 		input = nil
 		while input != "exit"
 			input = gets.strip.downcase
-			case input
-			when "1"
-				puts "Breakfast Recipes"
-			when "2"
-				puts "Lunch Recipes"
+
+			if input.to_i > 0
+        		the_category = @categories[input.to_i-1]
+        		puts "#{the_category} Recipes:"
+        	elsif input == "start over"
+        		list_categories
+			else
+				puts "That's not a valid category. Type start over or exit?" unless input == "exit"
 			end
 		end
 	end
