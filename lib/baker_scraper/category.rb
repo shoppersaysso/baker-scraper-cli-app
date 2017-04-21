@@ -14,6 +14,7 @@ class BakerScraper::Category
 		categories.flatten
 	end
 
+<<<<<<< HEAD
 
 
  	def self.url_scrape
@@ -29,3 +30,16 @@ class BakerScraper::Category
 
 
   end
+=======
+  end
+
+
+  # http://stackoverflow.com/questions/15661125/web-scraping-with-nokogirihtml-and-ruby-how-to-get-output-into-an-array
+ 	
+ 	 #require 'nokogiri'
+
+	# doc = Nokogiri::HTML(html)
+	#data = doc.search('.compatible_vehicles li').map{ |li|
+	#  li.search('p').map { |p| p.text }
+	#}
+>>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
