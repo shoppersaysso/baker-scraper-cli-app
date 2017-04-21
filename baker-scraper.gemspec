@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sara.hopper@gmail.com"]
 
   spec.summary       = %q{Scrapes recipes from www.joythebaker.com.}
-  spec.description   = %q{This program scrapes recipes from www.joythebaker.com and organizes them by category.}
+  spec.description   = %q{This program scrapes recipes from www.joythebaker.com and organizes them by category. You can then go right to the recipe.}
   spec.homepage      = "https://github.com/shoppersaysso/joy-the-baker-recipe-scraper-cli-app"
   spec.license       = "MIT"
 

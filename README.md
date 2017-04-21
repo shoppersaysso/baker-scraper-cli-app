@@ -1,8 +1,8 @@
 # BakerScraper
 
-Welcome to the Joy the Baker Scraper gem!
+Welcome to the Joy the Baker Scraper app!
 
-This gem scrapes the recipe categories, titles, and links from the baking blog, www.joythebaker.com.
+This app scrapes the recipe categories, titles, and links from the baking blog, www.joythebaker.com.
 
 ## Installation
 

@@ -31,11 +31,10 @@ class BakerScraper::CLI
         		recipe_url = @recipe_url[input.to_i-1]
         		Launchy.open "#{recipe_url}"
         		goodbye
+        		exit
         	elsif input == "start over"
         		list_categories
         	elsif input == "back"
-        		list_categories
-        	elsif input == "exit"
         		list_categories
   			else
 				puts "That's not a valid recipe. Type 'start over', 'back', or 'exit'?".red unless input == "exit"
