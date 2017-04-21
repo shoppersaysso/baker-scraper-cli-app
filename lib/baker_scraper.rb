@@ -2,6 +2,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 require 'colorize'
+require 'launchy'
 
 require_relative "./baker_scraper/version"
 require_relative './baker_scraper/cli'

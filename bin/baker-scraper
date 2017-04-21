@@ -1,8 +1,4 @@
 #!/usr/bin/env ruby
-<<<<<<< HEAD
-=======
-
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
 require  "bundler/setup"
 require './lib/baker_scraper'
 

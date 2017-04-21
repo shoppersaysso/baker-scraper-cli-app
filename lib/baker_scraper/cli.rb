@@ -29,7 +29,7 @@ class BakerScraper::CLI
 
 			if input.to_i > 0
         		recipe_url = @recipe_url[input.to_i-1]
-        		puts "#{recipe_url}"
+        		Launchy.open "#{recipe_url}"
         	elsif input == "start over"
         		list_categories
         	elsif input == "back"

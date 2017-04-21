@@ -1,9 +1,8 @@
 require "bundler/setup"
-<<<<<<< HEAD
+
 require "baker_scraper"
-=======
+
 require "baker/scraper"
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
