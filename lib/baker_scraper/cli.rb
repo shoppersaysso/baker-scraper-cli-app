@@ -9,7 +9,7 @@ class BakerScraper::CLI
 	end
 
 	def list_categories
-		puts "Enter a number of a recipe category, start over, or exit:".yellow
+		puts "Enter a number of a recipe category, 'start over', or 'exit':".yellow
 		@categories = BakerScraper::Category.scrape_categories
 		@categories.each.with_index(1) do |category, i|
 			puts "#{i}. #{category}"
@@ -17,7 +17,7 @@ class BakerScraper::CLI
 	end
 
 	  def list_recipes(the_category)
-		puts "Enter a number of a recipe, start over, or back:".green
+		puts "Enter a number of a recipe to open the URL; otherwise type 'start over' or 'back':".green
 		@recipes = BakerScraper::Recipe.scrape_recipes(the_category)
 		@recipe_url = BakerScraper::Recipe.recipe_url(the_category)
 		@recipes.each.with_index(1) do |title, i|
@@ -30,6 +30,7 @@ class BakerScraper::CLI
 			if input.to_i > 0
         		recipe_url = @recipe_url[input.to_i-1]
         		Launchy.open "#{recipe_url}"
+        		goodbye
         	elsif input == "start over"
         		list_categories
         	elsif input == "back"
@@ -37,7 +38,7 @@ class BakerScraper::CLI
         	elsif input == "exit"
         		list_categories
   			else
-				puts "That's not a valid recipe. Type start over, back, or exit?".red unless input == "exit"
+				puts "That's not a valid recipe. Type 'start over', 'back', or 'exit'?".red unless input == "exit"
 			end
 		end
 
