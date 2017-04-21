@@ -1,25 +1,15 @@
-<<<<<<< HEAD
 # BakerScraper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/baker_scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
-=======
-# Baker::Scraper
+Welcome to the Joy the Baker Scraper gem!
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/baker/scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
-
-TODO: Delete this and the text above, and describe your gem
+This gem scrapes the recipe categories, titles, and links from the baking blog, www.joythebaker.com.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-<<<<<<< HEAD
 gem 'baker_scraper'
-=======
-gem 'baker-scraper'
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
 ```
 
 And then execute:
@@ -28,11 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-<<<<<<< HEAD
     $ gem install baker_scraper
-=======
-    $ gem install baker-scraper
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
 
 ## Usage
 
@@ -46,11 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-<<<<<<< HEAD
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/baker_scraper. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-=======
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/baker-scraper. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
 
 
 ## License
