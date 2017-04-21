@@ -14,4 +14,23 @@ class BakerScraper::Category
 		categories.flatten
 	end
 
+
+
+ 	def self.url_scrape
+ 		doc = Nokogiri::HTML(open("http://joythebaker.com/recipe-index-2/"))
+ 		links = *doc.search("body > div.content-block.recipe-index a").map do |a|
+ 			[
+ 				a['href']
+   			]
+   		end
+   		links.uniq.flatten
+   		#binding.pry	
+   	end
+
+
+
   end
+
+
+
+# body > div.content-block.recipe-index
