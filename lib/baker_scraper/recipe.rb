@@ -177,20 +177,5 @@ class BakerScraper::Recipe
   end
 
 
- # def self.recipe_url(category)
- #   doc = Nokogiri::HTML(open("http://joythebaker.com/recipe-index-2/"))
- #   links = *doc.search("body > div.content-block.recipe-index a").map do |a|
- #     [
- #       a['href']
- #       ]
- #     end
- #     links.delete_if.include?("wp-content")
- #     links.uniq.flatten
-      #binding.pry
- #   end
-
-
-
-
 end
 

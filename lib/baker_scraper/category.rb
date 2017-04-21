@@ -24,13 +24,8 @@ class BakerScraper::Category
    			]
    		end
    		links.uniq.flatten
-   		#binding.pry	
    	end
 
 
 
   end
-
-
-
-# body > div.content-block.recipe-index
