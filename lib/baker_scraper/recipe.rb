@@ -1,19 +1,14 @@
 class BakerScraper::Recipe
 
-<<<<<<< HEAD
-	attr_accessor :title, :category, :recipe_url
+  attr_accessor :title, :category, :recipe_url
 
 
-=======
-	attr_accessor :category
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
 
   def self.scrape_recipes(category)
     @category = category
     self.scrape
   end
 
-<<<<<<< HEAD
 
 
   def self.scrape
@@ -180,22 +175,7 @@ class BakerScraper::Recipe
       recipe_url.flatten
     end
   end
-=======
-  def self.scrape
-    doc = Nokogiri::HTML(open("http://joythebaker.com/category/" + "#{@category}"))
-    recipes = doc.css("[id^=post] > div > div > h1").map do |h1|
-      h1.search('a').map { |a| a.text}
-    end
-    recipes.flatten
-  end
-
-
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
 
 
 end
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e

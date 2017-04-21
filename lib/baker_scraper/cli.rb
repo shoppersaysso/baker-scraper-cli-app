@@ -16,7 +16,6 @@ class BakerScraper::CLI
 		end
 	end
 
-<<<<<<< HEAD
 	  def list_recipes(the_category)
 		puts "Enter a number of a recipe, start over, or back:".green
 		@recipes = BakerScraper::Recipe.scrape_recipes(the_category)
@@ -42,14 +41,6 @@ class BakerScraper::CLI
 			end
 		end
 
-=======
-  def list_recipes(the_category)
-		puts "Enter a number of a recipe, start over, or back:".green
-		@recipes = BakerScraper::Recipe.scrape_recipes(the_category)
-		@recipes.each.with_index(1) do |title, i|
-			puts "#{i}. #{title}"
-		end
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
 	end
 
 	def menu
@@ -60,11 +51,7 @@ class BakerScraper::CLI
 			if input.to_i > 0
         		the_category = @categories[input.to_i-1]
         		puts "#{the_category} Recipes:"
-<<<<<<< HEAD
         		list_recipes("#{the_category}")
-=======
-        		list_recipes(the_category)
->>>>>>> 289c7c40c3ace8428d9fb59ea98a5be5c744876e
         	elsif input == "start over"
         		list_categories
 			else
